@@ -1,0 +1,8 @@
+<form [formGroup]="form" style="padding: 1em;">
+    <label style="padding-right: 1em">{{label}}</label>
+    <input id="value" formControlName="value" type="text" [required]="required">
+    <small style="color: rgb(209, 67, 67)" *ngIf="control.touched && control.hasError('required')">
+        required
+    </small>
+</form>
+{{control.errors | json}}
